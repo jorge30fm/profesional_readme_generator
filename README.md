@@ -1,41 +1,55 @@
-# profesional_readme_generator
+# README GENERATOOOOR
 
-<!-- prompt for info about application repository
-then generate generate readme with
-        - title of the project,
-        - description
-        - table of contents
-        - installation
-        - usage
-        - license
-        - contributing
-        - tests
-        - questions
+![LICENSE BADGE](https://img.shields.io/badge/license-ISC-brightgreen?style=for-the-badge)
+
+## Table of Contents
+
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Contributions](#how-to-contribute)
+6. [Contact Me](#contact)
+
+## Description
+
+Creates an amazing readme file for all of you ladies and gents
+
+## Installation
+
+Install then go kiss your mamma
+
+## Usage
+
+wipe butt with this app
+
+## License
+
+Distributed under ISC. See [License](https://spdx.org/licenses/ISC.html) for more information.
 
 
-when user enters project title
-then display as title of README
 
-when info about each of the sections is added
-then display them in readme
- Sections:
-  - description
-  - installation instructions
-  - usage information
-  - contribution guidelines
-- test instructions`
+                        ISC License
 
-when i choose a license from list of options
-then a badge is added near top of READMEand a notice is added to  the section of the README entitledLicece that explains which license the application is covered under
+                        Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
-https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
+                        THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-when i enter github username
-then it is added to entitled questions section, with link to github profile
+##Badges
 
-when i enter email address
- then add it to entitled questions sections with instructions on how to reach me with additional questions
+![LICENSE BADGE](https://img.shields.io/badge/license-ISC-brightgreen?style=for-the-badge)
 
- when i click links in table of contents
- then take user to corresponding section
-                 -->
+## How to Contribute
+
+you touch my code you're dead
+
+## Tests
+
+no tests allowed here
+
+## Contact
+
+suck my cock
+
+**GitHub Profile:** <https://github.com/cocky>
+**Email:** <cocky.com>

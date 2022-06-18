@@ -1,7 +1,7 @@
 //TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js')
+const {renderLicenseLink, renderLicenseSection, generateMarkdown} = require('./utils/generateMarkdown.js')
 
 //TODO: Create an array of questions for user input
 const questions = [
@@ -58,7 +58,7 @@ const questions = [
                 }
         },
         {
-                type: 'rawlist',
+                type: 'list',
                 name: 'license',
                 message: 'Select any license your application is covered under? (Check all that apply)',
                 choices: ['MIT License', 'Boost Software License 1.0', 'The Unlicense', 'ISC', 'GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0'],
@@ -66,7 +66,7 @@ const questions = [
         {
                 type: 'input',
                 name: 'contributionGuidelines',
-                message: 'Enter contribution guidelines',
+                message: 'Enter contribution guidelines: ',
                 validate: nameInput => {
                         if (nameInput) {
                                 return true;
@@ -80,6 +80,19 @@ const questions = [
                 type: 'input',
                 name: 'testInstructions',
                 message: 'Enter test instructions for your application: ',
+                validate: nameInput => {
+                        if (nameInput) {
+                                return true;
+                        } else {
+                                console.log('Please enter test instructions!')
+                                return false
+                        }
+                }
+        },
+        {
+                type: 'input',
+                name: 'contactInstructions',
+                message: 'Include instructions on how to reach you with additional questions: ',
                 validate: nameInput => {
                         if (nameInput) {
                                 return true;
@@ -135,7 +148,8 @@ const writeToFile =  fileContent => {
 //TODO: Create a function to initialize app
 const init = () => {
         return inquirer.prompt(questions)
-        .then(data => console.log(data))
+        .then(data => generateMarkdown(data))
+        .then(text => writeToFile(text))
 }
 
 //Function call to initialize app
