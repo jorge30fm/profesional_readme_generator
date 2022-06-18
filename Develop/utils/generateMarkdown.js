@@ -1,5 +1,5 @@
 //Function that returns the license link
-function renderLicenseLink(license) {
+const renderLicenseLink = license => {
         switch(license){
                 case 'GNU AGPLv3':
                         return 'https://spdx.org/licenses/AGPL-3.0-or-later.html';
@@ -11,7 +11,7 @@ function renderLicenseLink(license) {
                         return 'https://spdx.org/licenses/MPL-2.0.html';
                 case 'Apache License 2.0':
                         return 'https://spdx.org/licenses/Apache-2.0.html';
-                case 'MIT License':
+                case 'MIT':
                         return 'https://spdx.org/licenses/MIT.html';
                 case 'Boost Software License 1.0':
                         return 'https://spdx.org/licenses/BSL-1.0.html';
@@ -23,6 +23,28 @@ function renderLicenseLink(license) {
 
 }
 
+const renderLicenseBadge = license => {
+        switch(license) {
+                case 'MIT':
+                        return '![LICENSE BADGE](https://img.shields.io/badge/license-MIT-brightgreen?style=for-the-badge)';
+                case 'Boost Software License 1.0':
+                        return '![LICENSE BADGE](https://img.shields.io/badge/license-Boost%20Software-brightgreen?style=for-the-badge)'
+                case 'The Unlicense':
+                        return '![LICENSE BADGE](https://img.shields.io/badge/license-The%20Unlicense-brightgreen?style=for-the-badge)';
+                case 'ISC':
+                        return '![LICENSE BADGE](https://img.shields.io/badge/license-ISC-brightgreen?style=for-the-badge)'
+                case 'GNU GPLv3':
+                        return '![LICENSE BADGE](https://img.shields.io/badge/license-GNU%20GPLv3-brightgreen?style=for-the-badge)';
+                case 'GNU AGPLv3':
+                        return '![LICENSE BADGE](https://img.shields.io/badge/license-GNU%2-AGPLv3-brightgreen?style=for-the-badge)';
+                case 'GNU LGPLv3':
+                        return '![LICENSE BADGE](https://img.shields.io/badge/license-GNU%20LGPLv3-brightgreen?style=for-the-badge)'
+                case 'Mozilla Public License 2.0':
+                        return '![LICENSE BADGE](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-brightgreen?style=for-the-badge)'
+                case 'Apache License 2.0':
+                        return '![LICENSE BADGE](https://img.shields.io/badge/license-Apache%20License%202.0-brightgreen?style=for-the-badge)'
+        }
+}
 //Function that returns the license section of README
 const renderLicenseSection = license => {
         switch(license) {
@@ -1878,7 +1900,7 @@ of your accepting any such warranty or additional liability.
 
 END OF TERMS AND CONDITIONS
 `;
-                case 'MIT License':
+                case 'MIT':
                         return `
 MIT License
 
@@ -1966,7 +1988,7 @@ function generateMarkdown(data) {
 return `
 # ${data.title}
 
-![LICENSE BADGE](https://img.shields.io/badge/license-${data.license}-brightgreen?style=for-the-badge)
+${renderLicenseBadge(data.license)}
 
 ## Table of Contents
 
@@ -1998,7 +2020,7 @@ ${renderLicenseSection(data.license)}
 
 ## Badges
 
-![LICENSE BADGE](https://img.shields.io/badge/license-${data.license}-brightgreen?style=for-the-badge)
+${renderLicenseBadge(data.license)}
 
 ## How to Contribute
 
@@ -2013,6 +2035,7 @@ ${data.testInstructions}
 ${data.contactInstructions}
 
 **GitHub Profile:** <https://github.com/${data.gitHubUsername}>
+
 **Email:** <${data.email}>
 `;
 }
