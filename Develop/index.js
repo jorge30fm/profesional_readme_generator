@@ -59,7 +59,7 @@ const questions = [
         },
         {
                 type: 'rawlist',
-                name: 'licenses',
+                name: 'license',
                 message: 'Select any license your application is covered under? (Check all that apply)',
                 choices: ['MIT License', 'Boost Software License 1.0', 'The Unlicense', 'ISC', 'GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0'],
         },

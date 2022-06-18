@@ -1,6 +1,28 @@
 //TODO: Create a function that returns the license link
 //If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+        switch(license){
+                case 'GNU AGPLv3':
+                        return 'https://spdx.org/licenses/AGPL-3.0-or-later.html';
+                case 'GNU GPLv3':
+                        return 'https://spdx.org/licenses/GPL-3.0-or-later.html';
+                case 'GNU LGPLv3':
+                        return 'https://spdx.org/licenses/LGPL-3.0-or-later.html';
+                case 'Mozilla Public License 2.0':
+                        return 'https://spdx.org/licenses/MPL-2.0.html';
+                case 'Apache License 2.0':
+                        return 'https://spdx.org/licenses/Apache-2.0.html';
+                case 'MIT License':
+                        return 'https://spdx.org/licenses/MIT.html';
+                case 'Boost Software License 1.0':
+                        return 'https://spdx.org/licenses/BSL-1.0.html';
+                case 'The Unlicense':
+                        return 'https://spdx.org/licenses/Unlicense.html';
+                case 'ISC':
+                        return 'https://spdx.org/licenses/ISC.html'
+        }
+
+}
 
 //TODO: Create a function that returns the license section of README
 //If there is no license, return an empty string
@@ -1964,7 +1986,9 @@ function generateMarkdown(data) {
 
         ## License
 
-        ${data.licenses}
+        Distributed under ${data.licenses}. See [License](${renderLicenseLink(data.license)}) for more information.
+
+
         ${renderLicenseSection(data.license)}
 
         ##Badges
