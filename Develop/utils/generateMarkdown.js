@@ -36,7 +36,7 @@ const renderLicenseBadge = license => {
                 case 'GNU GPLv3':
                         return '![LICENSE BADGE](https://img.shields.io/badge/license-GNU%20GPLv3-brightgreen?style=for-the-badge)';
                 case 'GNU AGPLv3':
-                        return '![LICENSE BADGE](https://img.shields.io/badge/license-GNU%2-AGPLv3-brightgreen?style=for-the-badge)';
+                        return '![LICENSE BADGE](https://img.shields.io/badge/license-GNU%20AGPLv3-brightgreen?style=for-the-badge)';
                 case 'GNU LGPLv3':
                         return '![LICENSE BADGE](https://img.shields.io/badge/license-GNU%20LGPLv3-brightgreen?style=for-the-badge)'
                 case 'Mozilla Public License 2.0':
@@ -2013,7 +2013,7 @@ ${data.usageInfo}
 
 ## License
 
-Distributed under ${data.license}. See [License](${renderLicenseLink(data.license)}) for more information.
+Distributed under **${data.license}**. See [License](${renderLicenseLink(data.license)}) for more information.
 
 
 ${renderLicenseSection(data.license)}
