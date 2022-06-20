@@ -1983,7 +1983,7 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 
 }
 
-//TODO: Create a function to generatemarkdown for README
+//Function to generatemarkdown for README
 function generateMarkdown(data) {
 return `
 # ${data.title}
@@ -2036,7 +2036,7 @@ ${data.contactInstructions}
 
 **GitHub Profile:** <https://github.com/${data.gitHubUsername}>
 
-**Email:** <${data.email}>
+**Email:** ${data.email}
 `;
 }
 

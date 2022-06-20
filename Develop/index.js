@@ -1,9 +1,9 @@
-//TODO: Include packages needed for this application
+//Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const {renderLicenseLink, renderLicenseSection, generateMarkdown} = require('./utils/generateMarkdown.js')
 
-//TODO: Create an array of questions for user input
+//Creates an array of questions for user input
 const questions = [
         {
                 type: 'input',
@@ -97,7 +97,7 @@ const questions = [
                         if (nameInput) {
                                 return true;
                         } else {
-                                console.log('Please enter test instructions!')
+                                console.log('Please enter contact instructions!')
                                 return false
                         }
                 }
@@ -110,7 +110,7 @@ const questions = [
                         if (nameInput) {
                                 return true;
                         } else {
-                                console.log('Please enter test instructions!')
+                                console.log('Please enter your gitHub username!')
                                 return false
                         }
                 }
@@ -123,14 +123,14 @@ const questions = [
                         if (nameInput) {
                                 return true;
                         } else {
-                                console.log('Please enter test instructions!')
+                                console.log('Please enter your email!')
                                 return false
                         }
                 }
         }
 ];
 
-//TODO: Create a function to write a README file
+//Function to write a README file
 const writeToFile =  fileContent => {
         return new Promise((resolve, reject) => {
                 fs.writeFile('../README.md', fileContent, err => {
@@ -145,7 +145,7 @@ const writeToFile =  fileContent => {
         })
 }
 
-//TODO: Create a function to initialize app
+//Function to initialize app
 const init = () => {
         return inquirer.prompt(questions)
         .then(data => generateMarkdown(data))
